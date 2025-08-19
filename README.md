@@ -5,7 +5,7 @@ This is the Colyseus multiplayer server for the Ludiz-Vibe project.
 ## Features
 
 - **FullLLMRoom**: A multiplayer quiz room with Mars-themed questions
-- **Shared Types**: Uses `@repo/colyseus-types` for type safety between client and server
+- **Shared Types**: Includes Colyseus schema definitions for type safety
 - **Development Tools**: Includes playground and monitor for development
 
 ## Available Scripts
@@ -37,7 +37,7 @@ A multiplayer quiz room that supports up to 16 players. Features:
 
 ```typescript
 import { Client } from "colyseus.js";
-import { BaseState } from "@repo/colyseus-types";
+import { BaseState } from "./src/schemas/index.js";
 
 const client = new Client("ws://localhost:2567");
 const room = await client.joinOrCreate<BaseState>("full-llm-demo", {

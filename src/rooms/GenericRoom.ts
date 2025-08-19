@@ -4,7 +4,7 @@ import {
   BasePlayer,
   BaseState,
   type DynamicRoomOptions,
-} from "@repo/colyseus-types";
+} from "../schemas/index.js";
 import {
   loadDefinition,
   validateDefinition,
