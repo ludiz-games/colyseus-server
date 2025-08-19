@@ -1,17 +1,17 @@
 import { Client, Room } from "@colyseus/core";
 import type { Schema } from "@colyseus/schema";
 import {
-  BasePlayer,
-  BaseState,
-  type DynamicRoomOptions,
-} from "../schemas/index.js";
-import {
   loadDefinition,
   validateDefinition,
   type GameDefinition,
 } from "../definition-loader.js";
 import { standardActions } from "../runtime-actions.js";
 import { schemaBuilder } from "../schema-builder.js";
+import {
+  BasePlayer,
+  BaseState,
+  type DynamicRoomOptions,
+} from "../schemas/index.js";
 import { XStateInterpreter } from "../xstate-interpreter.js";
 
 /**
