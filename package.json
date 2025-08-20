@@ -25,7 +25,6 @@
     "@colyseus/schema": "^3.0.35",
     "@colyseus/tools": "^0.16.8",
     "@colyseus/ws-transport": "^0.16.5",
-
     "colyseus": "^0.16.4",
     "express": "^4.18.2",
     "json-logic-js": "^2.0.5",
