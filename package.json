@@ -19,7 +19,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "check-types": "tsc --noEmit",
-    "postinstall": "pnpm run build"
+    "postinstall": "yarn run build"
   },
   "dependencies": {
     "@colyseus/auth": "^0.16.6",
