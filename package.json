@@ -19,6 +19,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "check-types": "tsc --noEmit",
+    "prepare": "yarn run build",
     "postinstall": "yarn run build"
   },
   "dependencies": {
