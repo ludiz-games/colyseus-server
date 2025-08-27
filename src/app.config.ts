@@ -23,24 +23,30 @@ export default config({
      */
     app.use((req, res, next) => {
       const origin = req.headers.origin;
-      
+
       // Allow requests from E2B sandbox domains and localhost
       if (origin) {
         if (
-          origin.includes('.e2b.app') || 
-          origin.includes('localhost') || 
-          origin.includes('127.0.0.1')
+          origin.includes(".e2b.app") ||
+          origin.includes("localhost") ||
+          origin.includes("127.0.0.1")
         ) {
-          res.header('Access-Control-Allow-Origin', origin);
+          res.header("Access-Control-Allow-Origin", origin);
         }
       }
-      
-      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-      res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-      res.header('Access-Control-Allow-Credentials', 'true');
-      
+
+      res.header(
+        "Access-Control-Allow-Methods",
+        "GET, POST, PUT, DELETE, OPTIONS"
+      );
+      res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+      );
+      res.header("Access-Control-Allow-Credentials", "true");
+
       // Handle preflight requests
-      if (req.method === 'OPTIONS') {
+      if (req.method === "OPTIONS") {
         res.sendStatus(200);
       } else {
         next();
